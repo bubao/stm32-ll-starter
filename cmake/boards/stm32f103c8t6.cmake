@@ -8,7 +8,8 @@ set(BOARD_MCU_CORE      "cortex-m3")
 set(BOARD_MCU_FLOAT     "soft")
 set(BOARD_MCU_DEFINE    "STM32F103xB")
 # F1 Cube 包里提供的 linker 文件名（STM32F1xx 官方模板）—— 与 F4 不同在命名里没有额外 F，故直接声明文件名
+# https://oshwhub.com/li-chuang-kai-fa-ban/lichuang-gekuo-star-stm32f103c8t6-development-board
 set(BOARD_LINKER_FILE   "STM32F103XB_FLASH.ld")
 set(BOARD_LED_CLK_EN    "LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOC)")
-set(BOARD_SYS_CLK       72000000U)
+set(BOARD_SYS_CLK       8000000U)
 set(BOARD_PYOCD_TARGET  "stm32f103c8")
