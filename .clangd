@@ -1,0 +1,3 @@
+# .clangd —— 用 build/compile_commands.json 喂 clangd（CMakeLists.txt 已经开启 CMAKE_EXPORT_COMPILE_COMMANDS）
+CompileFlags:
+  CompilationDatabase: build

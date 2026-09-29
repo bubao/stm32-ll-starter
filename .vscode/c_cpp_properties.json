@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "ARM GCC (via compile_commands)",
+            "includePath": [
+                "${workspaceFolder}/src/app",
+                "${workspaceFolder}/src/drivers"
+            ],
+            "defines": [
+                "STM32F103xB",
+                "USE_FULL_LL_DRIVER"
+            ],
+            "compilerPath": "",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

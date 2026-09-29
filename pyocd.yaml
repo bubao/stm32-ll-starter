@@ -1,0 +1,2 @@
+target_override: stm32f103c8
+frequency: 4000000

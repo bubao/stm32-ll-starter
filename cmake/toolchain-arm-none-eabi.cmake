@@ -1,0 +1,16 @@
+# 交叉编译器配置 —— 前缀从环境变量读，默认 arm-none-eabi-
+if(DEFINED ENV{TOOLCHAIN_PREFIX})
+    set(TOOLCHAIN_PREFIX "$ENV{TOOLCHAIN_PREFIX}")
+else()
+    set(TOOLCHAIN_PREFIX "arm-none-eabi-")
+endif()
+
+set(CMAKE_SYSTEM_NAME      Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(CMAKE_C_COMPILER   ${TOOLCHAIN_PREFIX}gcc)
+set(CMAKE_ASM_COMPILER ${TOOLCHAIN_PREFIX}gcc)
+set(CMAKE_OBJCOPY      ${TOOLCHAIN_PREFIX}objcopy)
+set(CMAKE_SIZE         ${TOOLCHAIN_PREFIX}size)
+
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)

@@ -1,0 +1,27 @@
+# ----- Build output -----
+build/
+*.elf
+*.bin
+*.hex
+*.map
+
+# ----- IDE -----
+compile_commands.json
+
+# ----- macOS -----
+.DS_Store
+*.swp
+*.swo
+*~
+
+# ----- Toolchain generated -----
+*.o
+*.obj
+*.d
+
+# ----- Local environment（本机路径差异）-----
+env.conf
+
+# ----- Generated headers (by CMake configure_file) -----
+build/include/board_defs.h
+build/*.ld
