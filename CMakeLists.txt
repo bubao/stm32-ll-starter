@@ -172,7 +172,7 @@ add_custom_command(TARGET app.elf POST_BUILD
 # pyOCD flash target
 # ============================================================
 add_custom_target(flash
-    COMMAND pyocd flash -e sector -t ${BOARD_PYOCD_TARGET} ${CMAKE_BINARY_DIR}/app.elf --reset
+    COMMAND pyocd flash -e sector -t ${BOARD_PYOCD_TARGET} ${CMAKE_BINARY_DIR}/app.elf
     DEPENDS app.elf
     COMMENT "Flashing ${BOARD_NAME} via pyOCD (target=${BOARD_PYOCD_TARGET})"
 )
