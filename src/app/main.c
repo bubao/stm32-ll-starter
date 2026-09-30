@@ -5,15 +5,15 @@
 
 /* LED 引脚 */
 #define LED_PORT GPIOC
-#define LED_PIN LL_GPIO_PIN_13
+#define LED_PIN  LL_GPIO_PIN_13
 
 static void led_init(void)
 {
     /* 使能 GPIO 时钟（板级宏） */
-    BOARD_LED_CLK_EN;
+    BOARD_LED_CLK_EN();
 
     /* 配置 PC13 为推挽输出 */
-    LL_GPIO_InitTypeDef GPIO_InitStruct = { 0 };
+    LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
     GPIO_InitStruct.Pin = LED_PIN;
     GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
     GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
@@ -30,7 +30,8 @@ static void delay_ms(uint32_t ms)
     SysTick->VAL = 0;
     SysTick->CTRL = SysTick_CTRL_ENABLE_Msk | SysTick_CTRL_CLKSOURCE_Msk;
 
-    for (uint32_t i = 0; i < ms; i++) {
+    for (uint32_t i = 0; i < ms; i++)
+    {
         while (!(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk))
             ;
     }
@@ -41,7 +42,8 @@ int main(void)
 {
     led_init();
 
-    while (1) {
+    while (1)
+    {
         LL_GPIO_ResetOutputPin(LED_PORT, LED_PIN); /* LED 亮 */
         delay_ms(500);
         LL_GPIO_SetOutputPin(LED_PORT, LED_PIN); /* LED 灭 */

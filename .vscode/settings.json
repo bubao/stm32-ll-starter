@@ -1,0 +1,24 @@
+{
+    // C 语言格式化 (clang-format)
+    "[c]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[h]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+	"[cmake]": {
+		"editor.quickSuggestions": {
+			"other": "on",
+			"comments": "off",
+			"strings": "on"
+		},
+		"editor.formatOnSave": true
+	},
+    // CMake 格式化
+    "cmake.formatOnSave": true,
+
+    // 头文件搜索路径 (IntelliSense)
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json"
+}

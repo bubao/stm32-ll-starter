@@ -4,7 +4,7 @@
 #define BOARD_DEFS_H
 
 /* GPIO 时钟使能：LED 所在 GPIO 端口的总线时钟 */
-#define BOARD_LED_CLK_EN    @BOARD_LED_CLK_EN@
+#define BOARD_LED_CLK_EN()    @BOARD_LED_CLK_EN@
 
 /* 系统内核时钟频率（Hz） */
 #define SYSTEM_CLOCK_FREQ   @BOARD_SYS_CLK@

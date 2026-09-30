@@ -94,6 +94,9 @@ CMAKE_ARGS=(
 if [[ -n "$SD_SIZE" ]]; then
     CMAKE_ARGS+=(-DSD_SIZE="$SD_SIZE")
 fi
+if [[ -n "${SYS_CLK_FREQ:-}" ]]; then
+    CMAKE_ARGS+=(-DSYS_CLK_FREQ="$SYS_CLK_FREQ")
+fi
 
 # -------------------------------------------------------------------------
 # 4. Run
